@@ -1,0 +1,227 @@
+.theme-1 {
+    background-color: rgba(58, 70, 99, 1);
+    header {
+      color: white;
+
+      .toggle-button:active {
+        > .toggle-selector {
+          background-color: rgba(249, 107, 91, 1);
+        }
+      }
+
+      .toggle-button {
+        background: rgba(36, 45, 68, 1);
+        justify-content: start;
+
+        .toggle-selector {
+          background-color: rgba(208, 63, 47, 1);
+        }
+      }
+
+    }
+    button {
+        color: rgba(67, 74, 89, 1);
+        /* Button Background Color Variables */
+        --primary: rgba(234, 227, 220, 1);
+        --secondary: rgba(100, 113, 152, 1);
+        --danger: rgba(208, 63, 47, 1);
+
+        /* Button Background Color Loop */
+        @each $val in rando, primary, secondary, danger {
+            &.$(val) {
+              background-color: var(--$(val));
+            }
+          };
+
+          
+          /* Button Shadow Color Variables */
+          --primary-shadow: #B3A497;
+          --secondary-shadow: #414E73;
+          --danger-shadow: #93261A;
+
+          /* Button Shadow Loop */
+          @each $val in rando, primary, secondary, danger {
+            &.$(val) {
+              box-shadow: inset 0px -4px 0px var(--$(val)-shadow);
+              border-color: var(--$(val));
+            }
+          };
+
+          &.secondary, &.danger {
+            color: rgba(255, 255, 255, 1);
+          }
+
+          /* Button Active Styles Variables */
+          --primary-active: rgba(255, 255, 254, 1);
+          --secondary-active: rgba(162, 178, 225, 1);
+          --danger-active: rgb(249, 107, 91);
+
+          /* Button Active Styles Loop */
+          @each $val in rando, primary, secondary, danger {
+            &.$(val):active {
+                background-color: var(--$(val)-active);
+            }
+          };
+    };
+    .screen {
+        background-color: rgba(24, 31, 51, 1);
+        color: rgba(255, 255, 255, 1)
+    }
+
+    .controls {
+        background-color: rgba(36, 45, 68, 1);
+    }
+}
+
+.theme-2 {
+    background-color: rgba(230, 230, 230, 1);
+
+    header {
+      color: rgba(54, 54, 44, 1);
+
+      .toggle-button:active {
+        > .toggle-selector {
+          background-color: rgba(255, 138, 56, 1);
+        }
+      }
+
+      .toggle-button {
+        background: rgba(210, 205, 205, 1);
+        justify-content: center;
+
+        .toggle-selector {
+          background: rgba(200, 84, 2, 1);
+        }
+      }
+    }
+
+    button {
+        color: rgba(67, 74, 89, 1);
+
+        /* Button Background Color Variables */
+        --primary: rgba(229, 228, 225, 1);
+        --secondary: rgba(55, 129, 135, 1);
+        --danger: rgba(200, 84, 2, 1);
+
+        /* Button Background Color Loop */
+        @each $val in rando, danger, primary, secondary {
+            &.$(val) {
+              background-color: var(--$(val));
+            }
+          };
+
+          /* Button Shadow Color Variables */
+          --primary-shadow: #A79E91;
+          --secondary-shadow: #1B6066;
+          --danger-shadow: #873901;
+
+          /* Button Shadow Loop */
+          @each $val in rando, primary, secondary, danger {
+            &.$(val) {
+              box-shadow: inset 0px -4px 0px var(--$(val)-shadow);
+              border-color: var(--$(val));
+            }
+          };
+
+          &.secondary, &.danger {
+            color: rgba(255, 255, 255, 1);
+          }
+
+          /* Button active Styles */
+          --primary-active: rgba(255, 255, 255, 1);
+          --secondary-active: rgba(98, 181, 188, 1);
+          --danger-active: rgba(255, 138, 56, 1);
+
+          /* Button Active Styles Loop */
+          @each $val in rando, primary, secondary, danger {
+            &.$(val):active {
+                background-color: var(--$(val)-active);
+            }
+          };
+    };
+    .screen {
+        background-color: rgba(238, 238, 238, 1);
+        color: rgba(54, 54, 44, 1);
+    }
+
+    .controls {
+        background-color: rgba(210, 205, 205, 1);
+    }
+}
+
+.theme-3 {
+  background-color: rgba(23, 6, 42, 1);
+  header {
+      color: rgba(255, 229, 61, 1);
+
+      .toggle-button:active {
+        > .toggle-selector {
+          background-color: rgba(147, 255, 248, 1);
+        }
+      }
+
+      .toggle-button {
+        background: rgba(30, 9, 54, 1);
+        justify-content: flex-end;
+
+        .toggle-selector {
+          background: rgba(0, 222, 208, 1);
+        }
+      }
+  }
+  button {
+      color: rgba(255, 229, 61, 1);
+
+      /* Button Background Color Variables */
+      --primary: rgba(51, 28, 77, 1);
+      --secondary: rgba(86, 7, 124, 1);
+      --danger: rgba(0, 222, 208, 1);
+
+      /* Button Background Color Loop */
+      @each $val in rando, danger, primary, secondary {
+          &.$(val) {
+            background-color: var(--$(val));
+          }
+        };
+
+        /* Button Shadow Color Variables */
+        --primary-shadow: #881C9E;
+        --secondary-shadow: #BE15F4;
+        --danger-shadow: #6CF9F1;
+
+        /* Button Shadow Loop */
+        @each $val in rando, primary, secondary, danger {
+          &.$(val) {
+            box-shadow: inset 0px -4px 0px var(--$(val)-shadow);
+            border-color: var(--$(val));
+          }
+        };
+
+        &.secondary {
+          color: rgba(255, 255, 255, 1);
+        } 
+        &.danger {
+          color: rgba(26, 35, 39, 1);
+        }
+
+        /* Button active Styles */
+        --primary-active: rgba(108, 52, 172, 1);
+        --secondary-active: rgba(134, 49, 175, 1);
+        --danger-active: rgba(147, 255, 248, 1);
+
+        /* Button Active Styles Loop */
+        @each $val in rando, primary, secondary, danger {
+          &.$(val):active {
+              background-color: var(--$(val)-active);
+          }
+        };
+  };
+  .screen {
+      background-color: rgba(30, 9, 54, 1);
+      color: rgba(255, 229, 61, 1);
+  }
+
+  .controls {
+      background-color: rgba(30, 9, 54, 1);
+  }
+}
